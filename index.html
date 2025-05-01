@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Are You Hungry?</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <img src="images/chef-left.png" class="chef left" alt="Chef waving">
+    <img src="images/chef-right.png" class="chef right" alt="Chef waving">
+
+    <h1 class="title">ARE YOU HUNGRY?</h1>
+    
+    <img src="images/spoons.png" class="icon" alt="Spoons icon">
+    
+    <div class="search-bar">
+      <input type="text" placeholder="Search..." id="searchInput" />
+      <button id="searchBtn">
+        <span>&#128269;</span>
+      </button>
+    </div>
+
+    <p class="hint">Ex: Pasta, Chicken, Beef, Fish</p>
+  </div>
+
+  <script>
+    const searchInput = document.getElementById('searchInput');
+    const searchBtn = document.getElementById('searchBtn');
+
+    // When button
+    searchBtn.addEventListener('click', handleSearch);
+
+    // When Enter
+    searchInput.addEventListener('keydown', function(event) {
+      if (event.key === 'Enter') {
+        handleSearch();
+      }
+    });
+
+    function handleSearch() {
+      const flavor = searchInput.value.trim();
+      if (flavor) {
+        localStorage.setItem('flavor', flavor);
+        window.location.href = 'recipes.html';
+      }
+    }
+  </script>
+</body>
+</html>
