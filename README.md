@@ -18,11 +18,12 @@ My plan is to expand the menu and perhaps find another API that gives more optio
 
 1. Open "index.html" in your browser
 2. Type in a flavor or ingredient
-3. Press enter or click the searcj glass icon
-4. On the results page, filter by cuisine if desired or click "Show Me More" to refresh
-5. Click "View Recipe" to see full instructions on Spoonacular
+3. Press enter or click the search glass icon
+5. On the results page, filter by cuisine if desired or click "Show Me More" to refresh
+6. Click "View Recipe" to see full instructions on Spoonacular
 
 # API
 
 This project uses the [Spoonacular API](https://spoonacular.com/food-api).
+
 
